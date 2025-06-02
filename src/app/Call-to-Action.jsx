@@ -7,7 +7,7 @@ function CallToAction() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-8 py-2 mb-10">
 
-        {/* Appel à l'action */}
+
         <div className="text-center bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-12 text-white">
           <Typography variant="h3" className="mb-4">
             Vous souhaitez devenir partenaire ?
