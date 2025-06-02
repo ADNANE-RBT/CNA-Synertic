@@ -5,7 +5,7 @@ export * from "./page";
 export * from "./our-stats";
 export * from "./about-event";
 export * from "./faq";
-export * from "./sponsored-by";
+export * from "./Our-Partners";
 export * from "./event-content";
 
 

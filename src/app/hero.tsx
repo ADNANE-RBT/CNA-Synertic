@@ -33,16 +33,12 @@ function Hero() {
   }, []);
 
   return (
-    <div className="relative min-h-screen w-full bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-      <div className="absolute inset-0 bg-black/40" />
+    <div 
+      className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/image/african_cybersecurity_summit_morocco_cover.jfif')" }}
+    >
+      <div className="absolute inset-0 bg-black/60" />
       
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/2 -left-40 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 right-1/4 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
-      </div>
-
       <div className="grid min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="container relative z-10 my-auto mx-auto grid place-items-center text-center max-w-6xl py-10">
           

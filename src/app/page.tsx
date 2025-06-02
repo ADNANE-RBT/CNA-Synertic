@@ -1,23 +1,28 @@
+"use client";
+
+
 // components
 import { Navbar, Footer } from "@/components";
 
 // sections
 import Hero from "./hero";
-import SponsoredBy from "./sponsored-by";
+import OurPartners from "./Our-Partners";
 import AboutEvent from "./about-event";
-import OurStats from "./our-stats";
 import EventContent from "./event-content";
 import Faq from "./faq";
+import OurSpeakers from "./ourspeakers";
+import CallToAction from "./Call-to-Action";
 
 export default function Portfolio() {
   return (
     <>
       <Navbar />
       <Hero />
-      <SponsoredBy />
+      <OurSpeakers />
+      <OurPartners />
       <AboutEvent />
-      <OurStats />
       <EventContent />
+      <CallToAction />
       <Faq />
       <Footer />
     </>
