@@ -10,13 +10,13 @@ const SPONSORS = [
   "google",
   "amazon",
   "netflix",
-    "coinbase",
+  "coinbase",
   "spotify",
   "pinterest",
   "google",
   "amazon",
   "netflix",
-    "coinbase",
+  "coinbase",
   "spotify",
   "pinterest",
   "google",
@@ -28,8 +28,8 @@ export function OurPartners() {
   return (
     <section className="py-8 px-8 lg:py-20">
       <div className="container mx-auto text-center">
-        <Typography variant="h6" color="blue-gray" className="mb-8">
-          SPONSORED BY
+        <Typography variant="h6" color="blue-gray" className="mb-8 uppercase tracking-wide">
+          Nos Partenaires
         </Typography>
         <div className="flex flex-wrap items-center justify-center gap-6">
           {SPONSORS.map((logo, key) => (
@@ -38,7 +38,7 @@ export function OurPartners() {
               height={256}
               key={key}
               src={`/logos/logo-${logo}.svg`}
-              alt={logo}
+              alt={`Logo de ${logo}`}
               className="w-40"
             />
           ))}

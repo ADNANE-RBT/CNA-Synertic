@@ -42,17 +42,13 @@ export function Navbar() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form data:", formData);
+    console.log("Données du formulaire :", formData);
     handleModalOpen();
   };
 
   React.useEffect(() => {
     function handleScroll() {
-      if (window.scrollY > 0) {
-        setIsScrolling(true);
-      } else {
-        setIsScrolling(false);
-      }
+      setIsScrolling(window.scrollY > 0);
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -72,30 +68,30 @@ export function Navbar() {
           <div className="flex items-center gap-2">
             <img 
               src="/logos/logo.png" 
-              alt="Event Logo"
+              alt="Logo de l’événement"
               className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
             />
             <Typography
               color={isScrolling ? "blue-gray" : "white"}
               className="text-lg font-bold hidden sm:block"
             >
-              AFRICAN CYBERSECURITY FORUM 2025
+              FORUM AFRICAIN DE LA CYBERSÉCURITÉ 2025
             </Typography>
           </div>
       
           <div className="items-center gap-4 lg:flex">
-              <Button 
-                color={isScrolling ? "gray" : "white"}
-                onClick={handleModalOpen}
-                className="hover:shadow-md transition-all"
-              >
-                Enroll
-              </Button>
+            <Button 
+              color={isScrolling ? "gray" : "white"}
+              onClick={handleModalOpen}
+              className="hover:shadow-md transition-all"
+            >
+              S’inscrire
+            </Button>
           </div>
         </div>
       </MTNavbar>
 
-      {/* Enhanced Enrollment Modal */}
+      {/* Modal d'inscription amélioré */}
       <Dialog 
         open={modalOpen} 
         handler={handleModalOpen} 
@@ -105,7 +101,7 @@ export function Navbar() {
         <DialogHeader className="bg-blue-500 text-white rounded-t-lg">
           <div className="w-full flex justify-between items-center">
             <Typography variant="h4" className="font-bold">
-              Event Enrollment
+              Inscription à l’événement
             </Typography>
             <button 
               onClick={handleModalOpen}
@@ -125,14 +121,14 @@ export function Navbar() {
         </DialogHeader>
         <DialogBody className="p-6 max-h-[70vh] overflow-y-auto">
           <Typography color="gray" className="mb-6">
-            Please fill out the form below to enroll in the African Cybersecurity Forum 2025.
+            Merci de remplir le formulaire ci-dessous pour vous inscrire au Forum Africain de la Cybersécurité 2025.
           </Typography>
           
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <Input
-                  label="Name"
+                  label="Nom"
                   value={formData.name}
                   onChange={(e) => handleInputChange("name", e.target.value)}
                   required
@@ -144,7 +140,7 @@ export function Navbar() {
               
               <div>
                 <Input
-                  label="Personal Name"
+                  label="Prénom"
                   value={formData.personalName}
                   onChange={(e) => handleInputChange("personalName", e.target.value)}
                   required
@@ -156,7 +152,7 @@ export function Navbar() {
               <div className="md:col-span-2">
                 <Input
                   type="email"
-                  label="Email"
+                  label="Adresse e-mail"
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
                   required
@@ -167,7 +163,7 @@ export function Navbar() {
               
               <div>
                 <Input
-                  label="Organization"
+                  label="Organisation"
                   value={formData.organism}
                   onChange={(e) => handleInputChange("organism", e.target.value)}
                   required
@@ -178,7 +174,7 @@ export function Navbar() {
               
               <div>
                 <Input
-                  label="Country"
+                  label="Pays"
                   value={formData.country}
                   onChange={(e) => handleInputChange("country", e.target.value)}
                   required
@@ -190,7 +186,7 @@ export function Navbar() {
               <div className="md:col-span-2">
                 <Input
                   type="tel"
-                  label="Phone"
+                  label="Téléphone"
                   value={formData.phone}
                   onChange={(e) => handleInputChange("phone", e.target.value)}
                   required
@@ -209,7 +205,7 @@ export function Navbar() {
               onClick={handleModalOpen}
               className="hover:shadow-sm"
             >
-              Cancel
+              Annuler
             </Button>
             <Button 
               variant="gradient" 
@@ -217,7 +213,7 @@ export function Navbar() {
               onClick={handleSubmit}
               className="bg-blue-500 hover:bg-blue-600 hover:shadow-md transition-all"
             >
-              Submit Enrollment
+              Valider l'inscription
             </Button>
           </div>
         </DialogFooter>
