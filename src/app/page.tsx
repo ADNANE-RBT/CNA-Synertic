@@ -20,8 +20,8 @@ export default function Portfolio() {
       <Hero />
       <OurSpeakers />
       <OurPartners />
-      <AboutEvent />
-      <EventContent />
+      {/* <AboutEvent /> */}
+      {/* <EventContent /> */}
       <CallToAction />
       <Faq />
       <Footer />

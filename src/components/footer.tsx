@@ -34,9 +34,9 @@ export function Footer() {
             variant="h6"
             className="text-gray-900"
           >
-            Material Tailwind
+            AFRICAN CYBERSECURITY FORUM 2025
           </Typography>
-          <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
+          {/* <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
             {LINKS.map((link, index) => (
               <li key={index}>
                 <Typography
@@ -50,7 +50,7 @@ export function Footer() {
                 </Typography>
               </li>
             ))}
-          </ul>
+          </ul> */}
           <div className="flex w-fit justify-center gap-2">
             <IconButton size="sm" color="gray" variant="text">
               <i className="fa-brands fa-twitter text-lg" />
@@ -66,20 +66,7 @@ export function Footer() {
             </IconButton>
           </div>
         </div>
-        <Typography
-          color="blue-gray"
-          className="text-center mt-12 font-normal !text-gray-700"
-        >
-          &copy; {CURRENT_YEAR} Made with{" "}
-          <a href="https://www.material-tailwind.com" target="_blank">
-            Material Tailwind
-          </a>{" "}
-          by{" "}
-          <a href="https://www.creative-tim.com" target="_blank">
-            Creative Tim
-          </a>
-          .
-        </Typography>
+
       </div>
     </footer>
   );
